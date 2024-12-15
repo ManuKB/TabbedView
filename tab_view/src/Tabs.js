@@ -1,30 +1,32 @@
 // Import necessary React libraries
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import TabContent from "./TabContent";
+import "./Tabs.css";
 
 // Example data structure
 const tabsData = {
-  tab1: ['tab1.1', 'tab1.2'],
-  tab2: ['tab2.1', 'tab2.2'],
-  tab3: ['tab3.1', 'tab3.2', 'tab3.3'],
+  tab1: ["tab1.1", "tab1.2"],
+  tab2: ["tab2.1", "tab2.2"],
+  tab3: ["tab3.1", "tab3.2", "tab3.3"],
 };
 
 function DynamicTabs({ data }) {
   const [activeMainTab, setActiveMainTab] = useState(Object.keys(data)[0]); // Default to the first tab
-  const [activeSubTab, setActiveSubTab] = useState(data[Object.keys(data)[0]][0]); // Default to the first sub-tab
+  const [activeSubTab, setActiveSubTab] = useState(
+    data[Object.keys(data)[0]][0]
+  ); // Default to the first sub-tab
 
   return (
-    <div>
+    <div class="tabs">
       {/* Main Tabs */}
-      <div style={{ display: 'flex', gap: '10px', marginBottom: '20px' }}>
+      <div class="main_tab">
         {Object.keys(data).map((mainTab) => (
           <button
             key={mainTab}
+            className="tab_header"
             style={{
-              padding: '10px',
-              backgroundColor: activeMainTab === mainTab ? '#007BFF' : '#ccc',
-              color: activeMainTab === mainTab ? 'white' : 'black',
-              border: 'none',
-              cursor: 'pointer',
+              backgroundColor: activeMainTab === mainTab ? "#007BFF" : "#ccc",
+              color: activeMainTab === mainTab ? "white" : "#4f4e4ec9",
             }}
             onClick={() => {
               setActiveMainTab(mainTab);
@@ -35,35 +37,25 @@ function DynamicTabs({ data }) {
           </button>
         ))}
       </div>
-
-      {/* Sub-Tabs */}
-      <div style={{ display: 'flex', gap: '10px', marginBottom: '20px' }}>
-        {data[activeMainTab].map((subTab) => (
-          <button
-            key={subTab}
-            style={{
-              padding: '10px',
-              backgroundColor: activeSubTab === subTab ? '#28A745' : '#ccc',
-              color: activeSubTab === subTab ? 'white' : 'black',
-              border: 'none',
-              cursor: 'pointer',
-            }}
-            onClick={() => setActiveSubTab(subTab)}
-          >
-            {subTab}
-          </button>
-        ))}
-      </div>
-
-      {/* Content Display */}
-      <div style={{ padding: '20px', border: '1px solid #ddd', borderRadius: '5px' }}>
-        <h3>Selected Tab:</h3>
-        <p>
-          Main Tab: <strong>{activeMainTab}</strong>
-        </p>
-        <p>
-          Sub Tab: <strong>{activeSubTab}</strong>
-        </p>
+      <div class="main_tab_conatiner">
+        {/* Sub-Tabs */}
+        <div class="sub_tab">
+          {data[activeMainTab].map((subTab) => (
+            <button
+              key={subTab}
+              className="tab_header"
+              style={{
+                backgroundColor: activeSubTab === subTab ? "#28A745" : "#ccc",
+                color: activeSubTab === subTab ? "white" : "#4f4e4ec9",
+              }}
+              onClick={() => setActiveSubTab(subTab)}
+            >
+              {subTab}
+            </button>
+          ))}
+        </div>
+        {/* Content Display */}
+        <TabContent activeMainTab={activeMainTab} activeSubTab={activeSubTab} />
       </div>
     </div>
   );
@@ -71,8 +63,7 @@ function DynamicTabs({ data }) {
 
 function Tabs() {
   return (
-    <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
-      <h1>Dynamic Tabs Example</h1>
+    <div class="tabs_container">
       <DynamicTabs data={tabsData} />
     </div>
   );
