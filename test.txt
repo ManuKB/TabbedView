@@ -1,0 +1,30 @@
+Template (template.hbs)
+hbs
+Copy
+Edit
+{
+    "fullname": "{{test1.name}}",
+    "age": "{{test1.age}}"
+    {{#if (gt test1.age 18)}}
+    ,"PAN": "{{test2.pan}}"
+    {{/if}}
+}
+JavaScript Code
+javascript
+Copy
+Edit
+const Handlebars = require('handlebars');
+const fs = require('fs');
+
+Handlebars.registerHelper('gt', function (a, b) {
+    return a > b;
+});
+
+const test1 = JSON.parse(fs.readFileSync('test1.json', 'utf8'));
+const test2 = JSON.parse(fs.readFileSync('test2.json', 'utf8'));
+
+const template = fs.readFileSync('template.hbs', 'utf8');
+const compiledTemplate = Handlebars.compile(template);
+const output = compiledTemplate({ test1, test2 });
+
+console.log(output);
