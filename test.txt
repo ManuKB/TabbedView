@@ -28,3 +28,9 @@ const compiledTemplate = Handlebars.compile(template);
 const output = compiledTemplate({ test1, test2 });
 
 console.log(output);
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+EJS – Simple and powerful templating engine
+Mustache.js – Logic-less templating similar to Handlebars
+Pug – Concise syntax, great for HTML templates
+Nunjucks – More advanced templating from Mozilla
+LiquidJS – Used in Shopify, great for structured JSON
