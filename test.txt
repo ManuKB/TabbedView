@@ -1,16 +1,28 @@
-# Use Playwright's official image (includes Node.js)
-FROM mcr.microsoft.com/playwright:v1.42.0-focal
+# Use Playwright base image with Node.js 18
+FROM mcr.microsoft.com/playwright:v1.42.0-jammy
 
 # Set working directory
 WORKDIR /app
 
-# Copy package.json and install dependencies
+# Copy package.json and package-lock.json
 COPY package*.json ./
-RUN npm install
 
-# Copy rest of the files
+# Install dependencies (including Playwright)
+RUN npm ci --unsafe-perm
+
+# Install additional global libraries (e.g., eslint, typescript)
+RUN npm install -g eslint typescript
+
+# Copy the rest of the application files
 COPY . .
 
-# Run Playwright tests
-ENTRYPOINT ["npx", "playwright", "test"]
+# Set correct permissions (if needed)
+RUN chown -R pwuser:pwuser /app
+
+# Switch to non-root user (optional but recommended)
+USER pwuser
+
+# Default command
+CMD ["npx", "playwright", "test"]
+
 ---------------------------------------------------------------------------------------------------------------------
