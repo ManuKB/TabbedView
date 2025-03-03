@@ -1,28 +1,37 @@
-# Use Playwright base image with Node.js 18
+# Use Playwright base image
 FROM mcr.microsoft.com/playwright:v1.42.0-jammy
+
+# Set proxy environment variables
+ARG HTTP_PROXY=http://your-proxy:port
+ARG HTTPS_PROXY=http://your-proxy:port
+ARG NO_PROXY=localhost,127.0.0.1
+
+ENV HTTP_PROXY=$HTTP_PROXY
+ENV HTTPS_PROXY=$HTTPS_PROXY
+ENV NO_PROXY=$NO_PROXY
+
+# Set npm proxy settings
+RUN npm config set proxy $HTTP_PROXY && \
+    npm config set https-proxy $HTTPS_PROXY
+
+# Set Playwright proxy (if needed)
+RUN playwright install --with-deps
 
 # Set working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json
+# Copy and install dependencies
 COPY package*.json ./
-
-# Install dependencies (including Playwright)
 RUN npm ci --unsafe-perm
 
-# Install additional global libraries (e.g., eslint, typescript)
-RUN npm install -g eslint typescript
-
-# Copy the rest of the application files
+# Copy the application code
 COPY . .
 
-# Set correct permissions (if needed)
+# Set correct permissions
 RUN chown -R pwuser:pwuser /app
 
-# Switch to non-root user (optional but recommended)
+# Switch to non-root user
 USER pwuser
 
 # Default command
 CMD ["npx", "playwright", "test"]
-
----------------------------------------------------------------------------------------------------------------------
