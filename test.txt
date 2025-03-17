@@ -1,1 +1,17 @@
 docker run --rm -it -v $(pwd)/tests:/app/tests <image_name> npx playwright test
+
+
+Table Name: TestCase
+Columns: id, Name, Description, LastRunTime, TotalRuns, LastRunStatus, CreateteAt, CreatedBy, UpdatedAt, UpdatedBy
+
+Table Name: Stages
+Columns: id, Action(blob JSON), Validation(blob JSON), Order, TestCaseID(forienKey), CreateteAt, CreatedBy, UpdatedAt, UpdatedBy
+
+Table Name: TestData
+Columns: id, Name, Description, Request(blob JSON), Response(blob JSON), CreateteAt, CreatedBy, UpdatedAt, UpdatedBy
+
+Table Name: TestCaseTestDataMap
+Columns: id, TestCaseID(forienKey), TestDataID(forienKey), CreateteAt, CreatedBy, UpdatedAt, UpdatedBy
+
+Table Name: TestCaseExecution
+Columns: id, CurrentStage, TestCaseID(forienKey), RunAt, RunBy, UpdatedAt, UpdatedBy, Report( blob files/ file Path)
