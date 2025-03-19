@@ -15,3 +15,5 @@ Columns: id, TestCaseID(forienKey), TestDataID(forienKey), CreateteAt, CreatedBy
 
 Table Name: TestCaseExecution
 Columns: id, CurrentStage, TestCaseID(forienKey), RunAt, RunBy, UpdatedAt, UpdatedBy, Report( blob files/ file Path)
+
+https://manukmh.wixsite.com/my-site/excecutions
