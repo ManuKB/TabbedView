@@ -17,3 +17,222 @@ Table Name: TestCaseExecution
 Columns: id, CurrentStage, TestCaseID(forienKey), RunAt, RunBy, UpdatedAt, UpdatedBy, Report( blob files/ file Path)
 
 https://manukmh.wixsite.com/my-site/excecutions
+
+https://www.onlinegdb.com/
+
+
+🔹 Microservices Architecture & Design
+1️⃣ What are microservices, and how do they differ from monolithic architecture?
+2️⃣ How do you design a scalable microservices system?
+3️⃣ What are the best practices for breaking a monolith into microservices?
+4️⃣ How do you handle inter-service communication? (REST, gRPC, Kafka, RabbitMQ)
+5️⃣ How do you prevent cascading failures in microservices? (Circuit Breaker, Bulkhead)
+6️⃣ What is the CAP theorem, and how does it apply to microservices?
+7️⃣ Explain SAGA pattern and its role in microservices transactions.
+8️⃣ How do you implement CQRS (Command Query Responsibility Segregation) in microservices?
+9️⃣ What are the different API gateway patterns in microservices?
+10️⃣ How would you design an e-commerce system using microservices?
+
+🔹 Spring Boot & Spring Cloud
+1️⃣ How does Spring Boot simplify microservices development?
+2️⃣ Explain the role of Spring Cloud in microservices.
+3️⃣ How do you implement service discovery using Eureka or Consul?
+4️⃣ What is Feign Client, and how does it simplify REST communication?
+5️⃣ How do you use Resilience4j for Circuit Breaker and Rate Limiting?
+6️⃣ Explain how Spring Cloud Config works for centralized configuration.
+7️⃣ How do you implement distributed tracing using Zipkin or Jaeger?
+8️⃣ How do you secure a Spring Boot microservice using OAuth2 or JWT?
+9️⃣ What is the role of Sleuth in distributed logging?
+🔟 How do you handle retries and fallback mechanisms in microservices?
+
+🔹 Database & Transactions
+1️⃣ What is the best database strategy for microservices (SQL vs NoSQL)?
+2️⃣ How do you handle database consistency across multiple microservices?
+3️⃣ Explain Event Sourcing and its benefits in microservices.
+4️⃣ What is Outbox Pattern, and how does it help maintain consistency?
+5️⃣ How do you prevent deadlocks in a microservices database?
+6️⃣ How do you implement database versioning in microservices?
+7️⃣ How do you handle database schema migrations in microservices? (Liquibase, Flyway)
+
+🔹 Caching & Performance Optimization
+1️⃣ How do you use caching to improve microservices performance? (Redis, Memcached)
+2️⃣ What are different caching strategies? (Write-through, Write-back, Write-around)
+3️⃣ How do you handle cache invalidation in distributed systems?
+4️⃣ What are the trade-offs between in-memory caching and external caching?
+5️⃣ How do you profile and optimize a slow microservice?
+
+🔹 Security & Authentication
+1️⃣ What are the different authentication strategies for microservices?
+2️⃣ How do you secure internal microservices communication? (mTLS, OAuth2)
+3️⃣ How do you handle role-based access control (RBAC) in microservices?
+4️⃣ What are the common security vulnerabilities in microservices?
+5️⃣ How do you implement rate limiting to prevent API abuse?
+6️⃣ How do you prevent DDoS attacks in microservices?
+7️⃣ Explain JWT vs OAuth2 for securing microservices.
+8️⃣ How do you handle API Gateway security in microservices?
+
+🔹 Logging, Monitoring & Observability
+1️⃣ How do you centralize logging in a microservices architecture?
+2️⃣ What tools do you use for distributed tracing? (Zipkin, Jaeger, OpenTelemetry)
+3️⃣ How do you monitor microservices health? (Prometheus, Grafana)
+4️⃣ How do you implement log correlation across multiple microservices?
+5️⃣ What is the role of ELK (Elasticsearch, Logstash, Kibana) in microservices logging?
+
+🔹 Messaging & Event-Driven Architecture
+1️⃣ How do you implement event-driven microservices? (Kafka, RabbitMQ)
+2️⃣ What is the difference between event-driven and request-response architecture?
+3️⃣ What are the advantages of using Kafka in a microservices system?
+4️⃣ How do you handle message ordering and idempotency in event-driven systems?
+5️⃣ How do you implement event retry and dead-letter queues (DLQ)?
+
+🔹 DevOps, CI/CD & Deployment
+1️⃣ What is the best deployment strategy for microservices? (Canary, Blue-Green, Rolling)
+2️⃣ How do you implement CI/CD pipelines for microservices?
+3️⃣ How do you containerize microservices using Docker?
+4️⃣ What are the best practices for Kubernetes-based microservices deployment?
+5️⃣ How do you handle microservices versioning in production?
+6️⃣ How do you implement zero-downtime deployments?
+7️⃣ How do you use service mesh (Istio, Linkerd) in microservices?
+
+💡 Scenario-Based Questions (System Design Focused)
+1️⃣ How would you design a URL Shortener using microservices?
+2️⃣ How do you design a real-time chat system using microservices?
+3️⃣ Design a microservices-based order management system for an e-commerce platform.
+4️⃣ How do you handle millions of concurrent users in a microservices architecture?
+5️⃣ How do you migrate a monolithic application to microservices?
+
+🔹 Final Tips for Your Interview
+🔹 Emphasize design patterns → Circuit Breaker, Saga, Event Sourcing
+🔹 Explain trade-offs → Monolith vs. Microservices, SQL vs. NoSQL
+🔹 Show practical experience → Talk about your real-world challenges and solutions
+🔹 Demonstrate scalability knowledge → Caching, Load Balancing, Containerization
+🔹 Be comfortable with DevOps → Docker, Kubernetes, CI/CD
+
+Would you like sample code snippets for any of these topics? 🚀
+
+For a **12-year experienced professional**, **Docker interview questions** will focus on **architecture, networking, storage, security, orchestration (Kubernetes), and CI/CD integration**. Here’s a categorized list with key topics:  
+
+---
+
+## **🔹 Docker Basics & Architecture**
+1️⃣ **What is Docker, and how does it work?**  
+2️⃣ **Explain the difference between Docker image and Docker container.**  
+3️⃣ **What are the key components of Docker architecture?**  
+4️⃣ **What is the role of Docker Daemon, CLI, and Registry?**  
+5️⃣ **How is Docker different from a traditional virtual machine (VM)?**  
+
+---
+
+## **🔹 Docker Images & Containers**
+6️⃣ **How do you create a Docker image from a Dockerfile?**  
+7️⃣ **What is the difference between `COPY` and `ADD` in a Dockerfile?**  
+8️⃣ **How do you optimize Docker images for production?**  
+9️⃣ **How do you run a container in detached mode?**  
+```sh
+docker run -d nginx
+```
+🔟 **How do you list all running and stopped containers?**  
+```sh
+docker ps -a
+```
+1️⃣1️⃣ **How do you restart a container automatically on failure?**  
+```sh
+docker run --restart=always my-container
+```
+
+---
+
+## **🔹 Docker Networking**
+1️⃣2️⃣ **What are the different types of Docker networks?** (Bridge, Host, Overlay, Macvlan)  
+1️⃣3️⃣ **How do you expose a port in Docker?**  
+```sh
+docker run -p 8080:80 nginx
+```
+1️⃣4️⃣ **How do you connect two containers using a Docker network?**  
+```sh
+docker network create my_network
+docker run --network=my_network my_container
+```
+1️⃣5️⃣ **What is the difference between host networking and bridge networking?**  
+1️⃣6️⃣ **How do you troubleshoot network connectivity issues in Docker?**  
+```sh
+docker network inspect my_network
+```
+
+---
+
+## **🔹 Docker Volumes & Storage**
+1️⃣7️⃣ **What are the different types of Docker storage drivers?**  
+1️⃣8️⃣ **How do you persist data in Docker containers?**  
+```sh
+docker run -v /data:/var/lib/mysql mysql
+```
+1️⃣9️⃣ **What is the difference between a bind mount and a volume?**  
+2️⃣0️⃣ **How do you inspect volume details in Docker?**  
+```sh
+docker volume inspect my_volume
+```
+
+---
+
+## **🔹 Docker Compose**
+2️⃣1️⃣ **What is Docker Compose, and why is it useful?**  
+2️⃣2️⃣ **How do you define and start multiple services using `docker-compose.yml`?**  
+2️⃣3️⃣ **How do you scale services using Docker Compose?**  
+```sh
+docker-compose up --scale app=3
+```
+2️⃣4️⃣ **How do you override configurations in Docker Compose?**  
+
+---
+
+## **🔹 Docker Security**
+2️⃣5️⃣ **How do you secure Docker containers?**  
+2️⃣6️⃣ **What are Docker security best practices?**  
+2️⃣7️⃣ **How do you prevent privilege escalation inside a container?**  
+2️⃣8️⃣ **What is Docker Content Trust (DCT), and how does it work?**  
+2️⃣9️⃣ **How do you scan Docker images for vulnerabilities?**  
+```sh
+docker scan my-image
+```
+
+---
+
+## **🔹 Docker Orchestration & Kubernetes**
+3️⃣0️⃣ **How does Docker Swarm compare to Kubernetes?**  
+3️⃣1️⃣ **How do you deploy a containerized application to Kubernetes?**  
+3️⃣2️⃣ **What is the purpose of a Kubernetes Pod?**  
+3️⃣3️⃣ **How do you manage secrets in Docker and Kubernetes?**  
+3️⃣4️⃣ **What are Kubernetes StatefulSets, and how do they differ from Deployments?**  
+
+---
+
+## **🔹 CI/CD & Docker in Production**
+3️⃣5️⃣ **How do you integrate Docker with Jenkins for CI/CD?**  
+3️⃣6️⃣ **How do you use Docker multi-stage builds to optimize images?**  
+3️⃣7️⃣ **How do you manage environment variables in Docker?**  
+3️⃣8️⃣ **What strategies do you use to roll out updates in a production Docker setup?**  
+
+---
+
+## **🔹 Advanced & Scenario-Based Questions**
+3️⃣9️⃣ **How do you troubleshoot high CPU usage in a Docker container?**  
+4️⃣0️⃣ **How would you migrate an application from VMs to Docker?**  
+4️⃣1️⃣ **How do you set resource limits on CPU and memory for a container?**  
+```sh
+docker run --memory=512m --cpus=1 nginx
+```
+4️⃣2️⃣ **How do you debug a failed Docker container?**  
+```sh
+docker logs my-container
+```
+
+---
+
+## **🚀 Final Tips for Interview Success**
+✅ **Explain concepts with real-world examples**  
+✅ **Show hands-on experience with Dockerfiles, networks, volumes, and security**  
+✅ **Understand how Docker fits into DevOps & Kubernetes**  
+✅ **Demonstrate troubleshooting skills with logs, monitoring, and debugging tools**  
+
+Would you like a **Docker hands-on practical test scenario** to prepare better? 🚀
